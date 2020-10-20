@@ -1,0 +1,240 @@
+---
+layout: home
+title: Learning Quadrupedal Locomotion over Challenging Terrain
+authors: [Joonho Lee, joonho 2]
+videolink: https://youtu.be/embed/_rPvKlvyw2w
+---
+
+<figure class="figure" id="fig1">
+    <img alt="compilation-of-anymal-in-the-wild" src="assets/img/figure1.png" class="figure">
+<!--    <div class="caption">-->
+<!--        Fig. 1. Deployment of the presented locomotion controller in a variety of challenging environments-->
+<!--    </div>-->
+</figure>
+
+<!--<div class="paper-caption">-->
+<!--    Fig. 1. Deployment of the presented locomotion controller in a variety of challenging environments-->
+<!--</div>-->
+
+
+<div class="paper-title">
+    <h1>
+        {{ page.title }}
+    </h1>
+</div>
+
+
+<div class="paper-authors">
+    Joonho Lee<sup>1,*</sup>, Jemin Hwangbo<sup>1,2,†</sup>, Lorenz Wellhausen<sup>1</sup>, Vladlen Koltun<sup>3</sup>,
+    and Marco Hutter<sup>1</sup>
+</div>
+
+<div class="paper-affiliations">
+    <sup>1</sup> Robotic Systems Lab, ETH Zurich
+    <br><sup>2</sup> Robotics and Artificial Intelligence Lab, KAIST
+    <br><sup>3</sup> Intelligent Systems Lab, Intel
+    <br>
+    <em>
+        <br><sup>†</sup> Substantial part of the work was carried out during his stay at 1
+        <br><sup>*</sup> Corresponding author: jolee@ethz.ch
+    </em>
+</div>
+
+
+<h3>Paper links</h3>
+
+<div style="color:#707070">
+    <p class="paper-paragraph">
+        <a href="https://robotics.sciencemag.org/">Science Robotics Vol.5 eabc5986 (2020)</a>
+        <br>Author's version at <a href="arxiv.org">Arxiv</a>
+    </p></div>
+
+
+<hr class="thick2">
+
+<h2 id="abs">ABSTRACT</h2>
+<p class="paper-paragraph">
+    Legged locomotion can extend the operational domain of robots to some of the most challenging environments
+    on Earth. However, conventional controllers for legged locomotion are based on elaborate state machines that
+    explicitly trigger the execution of motion primitives and reflexes. These designs have increased in complexity but
+    fallen short of the generality and robustness of animal locomotion. Here, we present a robust controller for blind
+    quadrupedal locomotion in challenging natural environments. Our approach incorporates proprioceptive feedback
+    inlocomotion control and demonstrates zero-shot generalization from simulation to natural environments. The
+    controller is trained by reinforcement learning in simulation. The controller is driven by a neural network policy
+    that acts on a stream of proprioceptive signals. The controller retains its robustness under conditions that were
+    never encountered during training: deformable terrains such as mud and snow, dynamic footholds such as rubble,
+    and overground impediments such as thick vegetation and gushing water. The presented work indicates that
+    robust locomotion in natural environments can be achieved by training in simple domains.
+</p>
+
+
+<hr class="thick">
+<h2 id="sum">Summary video</h2>
+
+<figure class="figure" id="movie1">
+    <div class="featured-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9j2a1oAHDL8" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+    </div>
+</figure>
+
+<div >
+<hr class="thick">
+    <h2 id="featured">Main results</h2>
+    <em><h3>Zero-shot generalization to unknown environments</h3></em>
+
+    <figure class="figure" id="fig2">
+        <img alt="figure2" src="assets/img/figure2.png" ,
+             style="max-width: 800px">
+        <figcaption>Figure 1. A number of specific deployments. <h6 style="color:#595959">(Paper Figure 2)</h6></figcaption>
+    </figure>
+    <!--        <br>-->
+    <!--        <br>-->
+    <!--        <div class="caption2">-->
+    <!--            <h6>Fig. 2. A number of specific deployments.</h6>-->
+    <!--        </div>-->
+    <!--    </div>-->
+
+
+    <p class="paper-paragraph">
+        The presented controller has been deployed in diverse natural environments.
+        These include steep mountain trails, creeks with running water, mud, thick vegetation, loose rubble,
+        snow-covered
+        hills, and a damp forest.
+        A number of specific scenarios are further highlighted in <a href="#fig2">Fig. 1</a>A-F. These environments have
+        characteristics that the policy does not experience during training. The terrains can deform and crumble, with
+        significant variation of material properties over the surface. The robot's legs are subjected to frequent
+        disturbances due to vegetation, rubble, and sticky mud.
+        Existing terrain estimation pipelines that use cameras or LiDAR fail in environments
+        with
+        snow (<a href="#fig2">Fig. 1</a>A), water (<a href="#fig2">Fig. 1</a>C),
+        or dense vegetation (<a href="#fig2">Fig. 1</a>F).
+        Our controller does not rely on exteroception and is immune to such failure.
+        The controller learns omnidirectional locomotion based on a history of proprioceptive observations and
+        is robust in zero-shot deployment on terrains with characteristics that were never experienced during training.
+    </p>
+
+    <p class="paper-paragraph">
+        Our controller was used by the Cerberus team for the DARPA Subterranean Challenge Urban Circuit
+        (<a href="#fig2">Fig. 1</a>G).
+        It replaced a model-based controller that had been employed used by the team in the past.
+        The objective of the competition is to develop robotic systems that rapidly map, navigate,
+        and search complex underground environments, including tunnels, urban underground, and cave
+        networks. The human operators are not allowed to assist the robots during the competition physically;
+        only teleoperation is allowed. Accordingly, the locomotion controller needs to perform without failure
+        over extended mission durations.
+        The presented controller drove two ANYmal-B robots in four missions of 60 minutes. The
+        controller exhibited a zero failure rate throughout the competition. A steep staircase that was traversed
+        by one of the robots during the competition is shown in <a href="#fig2">Fig. 1</a>G.
+    </p>
+
+    <em><h3>Foot-trapping reflex</h3></em>
+
+    <p class="paper-paragraph">
+        The learned controller manifests a foot-trapping reflex, as shown in <a href="#movieS3">Movie 1</a>.
+        The policy identifies the trapping of the foot purely from proprioceptive observations and lifts the foot over
+        the obstacle.
+        Such reflexes were not specified in any way during training: they developed adaptively.
+        This distinguishes the presented approach from conventional controller design methods,
+        which explicitly build in such reflexes and orchestrate their execution by a higher-level state machine.
+    </p>
+
+    <figure class="figure" id="movieS3">
+        <div align="center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tPixnjLbTvE" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <figcaption>
+            Movie 1. Step experiment <h6 style="color:#595959">(Paper Movie S3)</h6>
+        </figcaption>
+    </figure>
+
+
+    <em><h3>Robustness to Model-mismatch</h3></em>
+
+    <p class="paper-paragraph">
+        We tested the controllers in the presence of substantial model mismatch.
+        We attached a 10 kg payload.
+        This payload is 22.7 % of the total weight of the robot, and was never simulated during training.
+        As shown in <a href="#movieS4">Movie 2</a>, the presented controller can still traverse steps up to 13.4 cm
+        despite the model mismatch.
+        The baseline is incapable of traversing any steps under any command speed with the payload.
+    </p>
+
+    <figure class="figure" id="movieS4">
+        <div align="center">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3Nr47MXCFO0" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+        <figcaption>
+            Movie 2. Payload experiment <h6 style="color:#595959">(Paper Movie S4)</h6>
+        </figcaption>
+    </figure>
+
+    <em><h3>Robustness to Foot Slippage</h3></em>
+
+    <p class="paper-paragraph">
+        Next we test robustness to foot slippage.
+        To introduce slippage, we used a moistened whiteboard.
+        The results are shown in <a href="#movieS5">Movie 3</a>.
+        The baseline quickly loses balance, aggressively swings the legs, and falls. In contrast, the presented
+        controller adapts to the slippery terrain and successfully locomotes in the commanded direction.
+    </p>
+
+    <figure class="figure" id="movieS5">
+        <div align="center">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/aMPwB3t4idU" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+        </div>
+        <figcaption>
+            Movie 3. Foot Slippage experiment <h6 style="color:#595959">(Paper Movie S5)</h6>
+        </figcaption>
+    </figure>
+
+</div>
+    <p>
+
+    </p>
+<!--<hr class="thick">-->
+<!--<div id="Bibtex">-->
+<!--    <h2>Bibtex</h2>-->
+<!--    <code>-->
+<!--        @article{hwangbo2019learning,-->
+<!--        title={Learning agile and dynamic motor skills for legged robots},-->
+<!--        author={Hwangbo, Jemin and Lee, Joonho and Dosovitskiy, Alexey and Bellicoso, Dario and Tsounis, Vassilios and Koltun, Vladlen and Hutter, Marco},-->
+<!--        journal={Science Robotics},-->
+<!--        volume={4},-->
+<!--        number={26},-->
+<!--        year={2019},-->
+<!--        publisher={Science Robotics}-->
+<!--        }-->
+<!--    </code>-->
+<!--</div>-->
+<hr class="thick2">
+<div id="acknowlege">
+    <h2>Acknowledgment</h2>
+    <p class="paper-paragraph">
+
+        <b>Author contributions</b>: J.L. formulated
+        the main idea of the training and control methods, implemented the controller, set up the
+        simulation, and trained control policies. J.L. performed the indoor experiments. J.H.
+        contributed in setting up the simulation. J.L. and L.W. performed outdoor experiments
+        together. J.L., J.H., L.W., M.H., and V.K. refined ideas, contributed in the experiment design,
+        and analyzed the data.
+        <br><b>Funding</b>: The project was funded, in part, by the Intel
+        Network on Intelligent Systems, the Swiss National Science Foundation (SNF) through the
+        National Centre of Competence in Research Robotics, the European Research Council (ERC)
+        under the European Union’s Horizon 2020 research and innovation programme grant
+        agreement no 852044 and no 780883. The work has been conducted as part of ANYmal
+        Research, a community to advance legged robotics.
+        <!--        <b>Competing interests</b>: The authors declare that they have no competing-->
+        <!--        interests.  <b>Data and materials availability</b>: All data needed to evaluate the conclusions in the-->
+        <!--        paper are present in the paper or the Supplementary Materials. Other materials can be found at-->
+        <!--        https://github.com/leggedrobotics/learning_locomotion_over_challening_terrain_supplementary.-->
+    </p>
+</div>

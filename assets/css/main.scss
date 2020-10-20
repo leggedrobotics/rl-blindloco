@@ -1,0 +1,31 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+/*
+  Site variables
+*/
+
+$base-font-family: 'Roboto', sans-serif;
+
+$body-font-family: 'Roboto', sans-serif;
+
+$code-font-family: "Source Code Pro", monospace;
+
+$brand-color: black;
+
+$highlight-color: #236BB0;
+$gray-color: #595959;
+$light-gray-color: #f2f2f2;
+
+$text-color: black;
+
+$container-width: 1200px;
+
+$tablet-width: 600px;
+
+$phone-width: 600px;
+
+$header-thickness: 56px;
+
+@import "_sass/-sections-dir";
