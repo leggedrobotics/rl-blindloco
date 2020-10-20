@@ -1,8 +1,7 @@
 ---
 layout: home
 title: Learning Quadrupedal Locomotion over Challenging Terrain
-authors: [Joonho Lee, joonho 2]
-videolink: https://youtu.be/embed/_rPvKlvyw2w
+authors: Joonho Lee
 ---
 
 <figure class="figure" id="fig1">
@@ -59,7 +58,7 @@ videolink: https://youtu.be/embed/_rPvKlvyw2w
     explicitly trigger the execution of motion primitives and reflexes. These designs have increased in complexity but
     fallen short of the generality and robustness of animal locomotion. Here, we present a robust controller for blind
     quadrupedal locomotion in challenging natural environments. Our approach incorporates proprioceptive feedback
-    inlocomotion control and demonstrates zero-shot generalization from simulation to natural environments. The
+    in locomotion control and demonstrates zero-shot generalization from simulation to natural environments. The
     controller is trained by reinforcement learning in simulation. The controller is driven by a neural network policy
     that acts on a stream of proprioceptive signals. The controller retains its robustness under conditions that were
     never encountered during training: deformable terrains such as mud and snow, dynamic footholds such as rubble,
@@ -71,13 +70,11 @@ videolink: https://youtu.be/embed/_rPvKlvyw2w
 <hr class="thick">
 <h2 id="sum">Summary video</h2>
 
-<figure class="figure" id="movie1">
-    <div class="featured-video">
+    <div class="videoWrapper"  id="movie1">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/9j2a1oAHDL8" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
     </div>
-</figure>
 
 <div >
 <hr class="thick">
@@ -140,16 +137,14 @@ videolink: https://youtu.be/embed/_rPvKlvyw2w
         which explicitly build in such reflexes and orchestrate their execution by a higher-level state machine.
     </p>
 
-    <figure class="figure" id="movieS3">
-        <div align="center">
+    <div class="figure" id="movieS3">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/tPixnjLbTvE" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-        </div>
         <figcaption>
-            Movie 1. Step experiment <h6 style="color:#595959">(Paper Movie S3)</h6>
+           Movie 1. Step experiment<h6 style="color:#595959">(Paper Movie S3)</h6>
         </figcaption>
-    </figure>
+    </div>
 
 
     <em><h3>Robustness to Model-mismatch</h3></em>
@@ -163,16 +158,14 @@ videolink: https://youtu.be/embed/_rPvKlvyw2w
         The baseline is incapable of traversing any steps under any command speed with the payload.
     </p>
 
-    <figure class="figure" id="movieS4">
-        <div align="center">
+    <div class="figure" id="movieS4">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/3Nr47MXCFO0" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-        </div>
         <figcaption>
             Movie 2. Payload experiment <h6 style="color:#595959">(Paper Movie S4)</h6>
         </figcaption>
-    </figure>
+    </div>
 
     <em><h3>Robustness to Foot Slippage</h3></em>
 
@@ -184,18 +177,16 @@ videolink: https://youtu.be/embed/_rPvKlvyw2w
         controller adapts to the slippery terrain and successfully locomotes in the commanded direction.
     </p>
 
-    <figure class="figure" id="movieS5">
-        <div align="center">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/aMPwB3t4idU" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
 
-        </div>
-        <figcaption>
-            Movie 3. Foot Slippage experiment <h6 style="color:#595959">(Paper Movie S5)</h6>
-        </figcaption>
+    <figure class="figure">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/aMPwB3t4idU" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+    <figcaption>
+        Movie 3. Foot Slippage experiment <h6 style="color:#595959">(Paper Movie S5)</h6>
+    </figcaption>
     </figure>
-
 </div>
     <p>
 
