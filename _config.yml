@@ -15,7 +15,7 @@ sass:
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           "Learning Quadrupedal Locomotion over Challenging Terrain"
-description:	       ""
+description:	       "Project page for the science robotics paper"
 author:              "Joonho Lee"
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
