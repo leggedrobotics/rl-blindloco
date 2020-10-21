@@ -6,15 +6,7 @@ authors: Joonho Lee
 
 <figure class="figure" id="fig1">
     <img alt="compilation-of-anymal-in-the-wild" src="assets/img/figure1.png" class="figure">
-    <!--    <div class="caption">-->
-    <!--        Fig. 1. Deployment of the presented locomotion controller in a variety of challenging environments-->
-    <!--    </div>-->
 </figure>
-
-<!--<div class="paper-caption">-->
-<!--    Fig. 1. Deployment of the presented locomotion controller in a variety of challenging environments-->
-<!--</div>-->
-
 
 <div class="paper-title">
     {{ page.title }}
@@ -81,7 +73,9 @@ authors: Joonho Lee
 <div>
     <hr class="thick2">
     <h2 id="featured">Highlights</h2>
-    <em><h3>Zero-shot generalization to unknown environments</h3></em>
+    <div style=" padding-bottom: 1rem;">
+            <em><h3>Zero-shot generalization to unknown environments</h3></em>
+        </div>
 
     <figcaption>
         Figure 1. A number of specific deployments
@@ -89,16 +83,7 @@ authors: Joonho Lee
     </figcaption>
     <figure class="figure" id="fig2">
         <img alt="figure2" src="assets/img/figure2.png">
-        <!-- <figcaption>Figure 1. A number of specific deployments. <h6 style="color:#595959">(Paper Figure 2)</h6></figcaption> -->
     </figure>
-
-
-    <!--        <br>-->
-    <!--        <br>-->
-    <!--        <div class="caption2">-->
-    <!--            <h6>Fig. 2. A number of specific deployments.</h6>-->
-    <!--        </div>-->
-    <!--    </div>-->
 
 
     <p class="paper-paragraph">
@@ -132,18 +117,12 @@ authors: Joonho Lee
         controller exhibited a zero failure rate throughout the competition. A steep staircase that was traversed
         by one of the robots during the competition is shown in <a href="#fig2">Fig. 1</a>G.
     </p>
-
+    
+    <hr class="thick">
+    
+    <div style=" padding-bottom: 1rem;">
     <em><h3>Foot-trapping reflex</h3></em>
-
-    <p class="paper-paragraph">
-        The learned controller manifests a foot-trapping reflex, as shown in <a href="#movieS3">Movie 1</a>.
-        The policy identifies the trapping of the foot purely from proprioceptive observations and lifts the foot over
-        the obstacle.
-        Such reflexes were not specified in any way during training: they developed adaptively.
-        This distinguishes the presented approach from conventional controller design methods,
-        which explicitly build in such reflexes and orchestrate their execution by a higher-level state machine.
-    </p>
-
+    </div>
 
     <figcaption>
         Movie 1. Step experiment
@@ -155,17 +134,20 @@ authors: Joonho Lee
                 allowfullscreen></iframe>
     </div>
 
-
-    <em><h3>Robustness to Model-mismatch</h3></em>
-
     <p class="paper-paragraph">
-        We tested the controllers in the presence of substantial model mismatch.
-        We attached a 10 kg payload.
-        This payload is 22.7 % of the total weight of the robot, and was never simulated during training.
-        As shown in <a href="#movieS4">Movie 2</a>, the presented controller can still traverse steps up to 13.4 cm
-        despite the model mismatch.
-        The baseline is incapable of traversing any steps under any command speed with the payload.
+        The learned controller manifests a foot-trapping reflex, as shown in <a href="#movieS3">Movie 1</a>.
+        The policy identifies the trapping of the foot purely from proprioceptive observations and lifts the foot over
+        the obstacle.
+        Such reflexes were not specified in any way during training: they developed adaptively.
+        This distinguishes the presented approach from conventional controller design methods,
+        which explicitly build in such reflexes and orchestrate their execution by a higher-level state machine.
     </p>
+    
+    <hr class="thick">
+
+    <div style=" padding-bottom: 1rem;">
+    <em><h3>Robustness to Model-mismatch</h3></em>
+    </div>
 
     <figcaption>
         Movie 2. Payload experiment
@@ -177,18 +159,20 @@ authors: Joonho Lee
                 allowfullscreen></iframe>
     </div>
 
-
-    <em><h3>Robustness to Foot Slippage</h3></em>
-
     <p class="paper-paragraph">
-        Next we test robustness to foot slippage.
-        To introduce slippage, we used a moistened whiteboard.
-        The results are shown in <a href="#movieS5">Movie 3</a>.
-        The baseline quickly loses balance, aggressively swings the legs, and falls. In contrast, the presented
-        controller adapts to the slippery terrain and successfully locomotes in the commanded direction.
+        We tested the controllers in the presence of substantial model mismatch.
+        We attached a 10 kg payload.
+        This payload is 22.7 % of the total weight of the robot, and was never simulated during training.
+        As shown in <a href="#movieS4">Movie 2</a>, the presented controller can still traverse steps up to 13.4 cm
+        despite the model mismatch.
+        The baseline is incapable of traversing any steps under any command speed with the payload.
     </p>
 
+    <hr class="thick">
 
+    <div style=" padding-bottom: 1rem;">
+    <em><h3>Robustness to Foot Slippage</h3></em>
+    </div>
     <figcaption>
         Movie 3. Foot Slippage experiment
         <span style="font-size: 1rem; color:#595959">(paper Movie S5)</span>
@@ -198,6 +182,14 @@ authors: Joonho Lee
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
     </figure>
+
+    <p class="paper-paragraph">
+        Next we test robustness to foot slippage.
+        To introduce slippage, we used a moistened whiteboard.
+        The results are shown in <a href="#movieS5">Movie 3</a>.
+        The baseline quickly loses balance, aggressively swings the legs, and falls. In contrast, the presented
+        controller adapts to the slippery terrain and successfully locomotes in the commanded direction.
+    </p>
 
 </div>
 <p>
