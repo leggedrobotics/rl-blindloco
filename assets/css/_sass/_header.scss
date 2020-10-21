@@ -1,5 +1,5 @@
 .site-header {
-  min-height: 56px;
+  min-height: 50px;
   width: $container-width;
   position: fixed;
   font-size: 30;
@@ -12,7 +12,7 @@
 
 @media (max-width: $container-width) {
   .site-header {
-      min-height: 56px;
+      min-height: 50px;
       width: 95vw;
       position: fixed;
     //background-color: #ededed;
@@ -26,16 +26,16 @@
   color: $brand-color
 }
 .site-title {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 400;
-  line-height: 56px;
+  line-height: 24px;
   margin-bottom: 0;
-  margin-top: 0;
+  margin-top: 20px;
   padding-left: 10px;
   float: left;
 }
 .menu-list {
-  font-size: 24px;
+  font-size: 30px;
   line-height: $header-thickness;
   float: right;
 }
@@ -68,7 +68,7 @@
       color: black;
       padding: 16px;
       margin-top: 4px;
-      font-size: 16px;
+      font-size: 25px;
       border: none;
       cursor: pointer;
   }
@@ -83,6 +83,7 @@
       min-width: 160px;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 1;
+      //right:0;
   }
   .dropdown-content a {
       color: black;

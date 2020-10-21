@@ -6,9 +6,9 @@ authors: Joonho Lee
 
 <figure class="figure" id="fig1">
     <img alt="compilation-of-anymal-in-the-wild" src="assets/img/figure1.png" class="figure">
-<!--    <div class="caption">-->
-<!--        Fig. 1. Deployment of the presented locomotion controller in a variety of challenging environments-->
-<!--    </div>-->
+    <!--    <div class="caption">-->
+    <!--        Fig. 1. Deployment of the presented locomotion controller in a variety of challenging environments-->
+    <!--    </div>-->
 </figure>
 
 <!--<div class="paper-caption">-->
@@ -17,9 +17,7 @@ authors: Joonho Lee
 
 
 <div class="paper-title">
-    <h1>
-        {{ page.title }}
-    </h1>
+    {{ page.title }}
 </div>
 
 
@@ -42,11 +40,11 @@ authors: Joonho Lee
 
 <h3>Paper links</h3>
 
-<div style="color:#707070">
+<span style="color:#707070">
     <p class="paper-paragraph">
         <a href="https://robotics.sciencemag.org/">Science Robotics Vol.5 eabc5986 (2020)</a>
-        <br>Author's version at <a href="arxiv.org">Arxiv</a>
-    </p></div>
+        <br>Author's version <a href="assets/paper/paper_accepted_version.pdf" download>PDF</a>
+    </p></span>
 
 
 <hr class="thick2">
@@ -68,24 +66,33 @@ authors: Joonho Lee
 
 
 <hr class="thick">
-<h2 id="sum">Summary video</h2>
+<!--<h2 id="sum">Summary video</h2>-->
+<figcaption>
+    Summary video
+</figcaption>
 
-    <div class="videoWrapper"  id="movie1">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/9j2a1oAHDL8" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-    </div>
+<div class="videoWrapper" id="movie1">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9j2a1oAHDL8" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+</div>
 
-<div >
-<hr class="thick">
-    <h2 id="featured">Main results</h2>
+
+<div>
+    <hr class="thick2">
+    <h2 id="featured">Highlights</h2>
     <em><h3>Zero-shot generalization to unknown environments</h3></em>
 
+    <figcaption>
+        Figure 1. A number of specific deployments
+        <span style="font-size: 1rem; color:#595959">(Paper Figure 2)</span>
+    </figcaption>
     <figure class="figure" id="fig2">
-        <img alt="figure2" src="assets/img/figure2.png" ,
-             style="max-width: 800px">
-        <figcaption>Figure 1. A number of specific deployments. <h6 style="color:#595959">(Paper Figure 2)</h6></figcaption>
+        <img alt="figure2" src="assets/img/figure2.png">
+        <!-- <figcaption>Figure 1. A number of specific deployments. <h6 style="color:#595959">(Paper Figure 2)</h6></figcaption> -->
     </figure>
+
+
     <!--        <br>-->
     <!--        <br>-->
     <!--        <div class="caption2">-->
@@ -137,13 +144,15 @@ authors: Joonho Lee
         which explicitly build in such reflexes and orchestrate their execution by a higher-level state machine.
     </p>
 
-    <div class="figure" id="movieS3">
+
+    <figcaption>
+        Movie 1. Step experiment
+        <span style="font-size: 1rem; color:#595959">(Paper Movie S3)</span>
+    </figcaption>
+    <div class="videoWrapper" id="movieS3">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/tPixnjLbTvE" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-        <figcaption>
-           Movie 1. Step experiment<h6 style="color:#595959">(Paper Movie S3)</h6>
-        </figcaption>
     </div>
 
 
@@ -158,14 +167,16 @@ authors: Joonho Lee
         The baseline is incapable of traversing any steps under any command speed with the payload.
     </p>
 
-    <div class="figure" id="movieS4">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/3Nr47MXCFO0" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-        <figcaption>
-            Movie 2. Payload experiment <h6 style="color:#595959">(Paper Movie S4)</h6>
-        </figcaption>
+    <figcaption>
+        Movie 2. Payload experiment
+        <span style="font-size: 1rem; color:#595959">(Paper Movie S4)</span>
+    </figcaption>
+    <div class="videoWrapper" id="movieS4">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3Nr47MXCFO0" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
     </div>
+
 
     <em><h3>Robustness to Foot Slippage</h3></em>
 
@@ -178,19 +189,20 @@ authors: Joonho Lee
     </p>
 
 
-    <figure class="figure">
+    <figcaption>
+        Movie 3. Foot Slippage experiment
+        <span style="font-size: 1rem; color:#595959">(Paper Movie S5)</span>
+    </figcaption>
+    <figure class="videoWrapper">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/aMPwB3t4idU" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-
-    <figcaption>
-        Movie 3. Foot Slippage experiment <h6 style="color:#595959">(Paper Movie S5)</h6>
-    </figcaption>
     </figure>
-</div>
-    <p>
 
-    </p>
+</div>
+<p>
+
+</p>
 <!--<hr class="thick">-->
 <!--<div id="Bibtex">-->
 <!--    <h2>Bibtex</h2>-->
